@@ -2,9 +2,8 @@ const snd = document.getElementById("snd");
 //console.log(snd);
 const contentBox = document.getElementById('content-box');
 const contentInput = document.getElementById("content-input");
-const disp = document.querySelector("div");
+//const disp = document.querySelector("div");
 let firstClick=true;
-
 
 /*snd.onclick = function append() {
     contentBox.innerHTML = `<div>${contentInput.value}</div>`;
@@ -18,19 +17,10 @@ snd.onclick = function append() {
         console.log({ contentBox });
         contentInput.value = '';
         firstClick=false;
-    }else{
+    }else if(contentBox.children.length<=4){
         let newDiv=document.createElement('div');
-        disp.appendChild(newDiv);
+        contentBox.appendChild(newDiv);
         newDiv.textContent=contentInput.value;
         contentInput.value='';
     }
-    
 }
-
-
-    
-/*contentInput.onchange=(e)=>{
-    e=contentInput.target.value;
-    contentBox.innerHTML=`<div>${e}</div>`;
-}*/
-
