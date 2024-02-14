@@ -2,7 +2,6 @@ const snd = document.getElementById("snd");
 //console.log(snd);
 const contentBox = document.getElementById('content-box');
 const contentInput = document.getElementById("content-input");
-//const disp = document.querySelector("div");
 let firstClick=true;
 
 /*snd.onclick = function append() {
@@ -12,6 +11,7 @@ let firstClick=true;
 }*/
 
 snd.onclick = function append() {
+    //contentInput.setAttribute('maxLength','4');
     if(firstClick){
         contentBox.innerHTML = `<div>${contentInput.value}</div>`;
         console.log({ contentBox });
